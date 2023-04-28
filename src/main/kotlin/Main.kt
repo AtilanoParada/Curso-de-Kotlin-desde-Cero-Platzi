@@ -5,7 +5,7 @@ const val PI = 3.1416
 fun main(args: Array<String>) {
     println("Hello World!")
 
-    //variable com[un y modificable
+    //variable común y modificable
     var dinero = 10
     println(dinero)
     dinero = 5
@@ -39,4 +39,54 @@ fun main(args: Array<String>) {
     //cadena de texto con el símbolo $
     val nombreCompleto = "Su nombre es $nombre $apellido"
     println(nombreCompleto)
+
+    //Video 13 del curso de Platzi
+    if (nombre.isNotEmpty()) {
+        println("El largo de nuestra variable nombre es ${nombre.length}.")
+    } else {
+        println("Error, la variable nombre está vacía.")
+    }
+
+    //Está es la manera simplificada del if:
+    if (nombre.isNotEmpty()) println("El largo de nuestra variable nombre es ${nombre.length}.") else
+        println("Error, la variable nombre está vacía.")
+
+    val mensaje : String = if (nombre.length > 4) {
+        "Tú nombre es largo!"
+    } else if (nombre.isEmpty()) {
+        "El nombre está vacío"
+    } else {
+        "Tienes un nombre corto."
+    }
+    println (mensaje)
+
+    //Video 14 del curso de Platzi
+    //When es como un if, pero compara la misma variable, si solo tiene una línea se pueden omitir los corchetes.
+    val nombreColor = "Amarillo"
+
+    when (nombreColor) {
+        "Amarillo" -> println("El amarillo es el color de la alegría.")
+        "Rojo", "Carmesí" -> {
+            println("Este color simboliza la pasión.")
+        }
+        else -> println("Error, no tengo la información del color.")
+    }
+
+    val code = 200
+
+    when (code) {
+        in 200..299 -> println("Todo ha ido bien.")
+        in 400.rangeTo(500) -> println("Algo ha fallado.")
+        else -> println("Código desconocido, algo ha fallado.")
+    }
+
+    val tallaDeZapatos = 41
+
+    val mensaje2: String = when (tallaDeZapatos) {
+        41, 43 -> "Tenemos disponible."
+        42, 44 -> "Casi no nos quedan."
+        45 -> "Lo siento no tenemos disponible."
+        else -> "Estos zapatos solo vienen en tallas desde el 41 al 45"
+    }
+    println(mensaje2)
 }
