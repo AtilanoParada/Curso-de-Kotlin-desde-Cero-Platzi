@@ -105,4 +105,6 @@ fun main(args: Array<String>) {
     } while (numeroAleatorio > 50)
 
     ciclos()
+
+    nullables()
 }
