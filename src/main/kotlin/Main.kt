@@ -103,4 +103,6 @@ fun main(args: Array<String>) {
         val numeroAleatorio = (0..100).random()
         println("El número generado es $numeroAleatorio.")
     } while (numeroAleatorio > 50)
+
+    ciclos()
 }
