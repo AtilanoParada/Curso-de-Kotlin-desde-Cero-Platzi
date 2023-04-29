@@ -89,4 +89,18 @@ fun main(args: Array<String>) {
         else -> "Estos zapatos solo vienen en tallas desde el 41 al 45"
     }
     println(mensaje2)
+
+    //Ejercicios del video 15 del curso de Platzi
+    var contador = 10
+
+    while (contador > 0) {
+        println("El valor del contador es $contador.")
+        contador--
+    }
+
+    do {
+        println("Generando número aleatorio...")
+        val numeroAleatorio = (0..100).random()
+        println("El número generado es $numeroAleatorio.")
+    } while (numeroAleatorio > 50)
 }
