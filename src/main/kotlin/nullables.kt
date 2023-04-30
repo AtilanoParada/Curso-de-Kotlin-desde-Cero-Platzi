@@ -30,4 +30,11 @@ fun nullables() {
     val segundoValor = 0
     val resultado : Int = try { primerValor / segundoValor } catch (e : Exception) { 0 }
     println(resultado)
+
+    //Ejercicios del video 20 del curso de Platzi
+    var nombre2 : String? = null
+    //El operador Elvis (?:) se ocupa para asignar un valor por defecto cuando una variable nullable es null
+    val caracteresDeNombre : Int = nombre?.length ?: 0
+    println(caracteresDeNombre)
+
 }
