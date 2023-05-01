@@ -107,4 +107,6 @@ fun main(args: Array<String>) {
     ciclos()
 
     nullables()
+
+    listas()
 }
