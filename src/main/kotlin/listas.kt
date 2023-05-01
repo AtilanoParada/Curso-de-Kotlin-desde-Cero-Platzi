@@ -43,4 +43,44 @@ fun listas() {
 
     println("Mi array con errores $myArray.")
     println("Array como lista ${myArray.toList()}.")
+
+    //Ejercicios de; video 22 del curso de Platzi, ordenar arreglos.
+    val numerosDeLoteria = listOf<Int>(11, 22, 43, 56, 78, 66)
+
+    println(numerosDeLoteria)
+
+    //Vamos a ordenar los n[umeros de menor a mayor con sort.
+    val numerosSorted = numerosDeLoteria.sorted()
+
+    println(numerosSorted)
+
+    //También se puede ordenar los n[umeros de mayor a menos o descendiente.
+    val numerosDescendientes = numerosDeLoteria.sortedDescending()
+
+    println(numerosDescendientes)
+
+    //La siguiente función permite ordenar dependiendo de una condición.
+    val ordenarPorMultiplos = numerosDeLoteria.sortedBy { numero -> numero < 50 }
+
+    println(ordenarPorMultiplos)
+
+    //La siguiente función ordena de manera aleatoriamente, shuffled.
+    val numerosAleatorios = numerosDeLoteria.shuffled()
+
+    println(numerosAleatorios)
+
+    //La siguiente función ordena la lista de manera inversa.
+    val numerosEnReversa = numerosDeLoteria.reversed()
+
+    println(numerosEnReversa)
+
+    //Las siguientes dos funciones son muy útiles en programación funcional.
+    //Map nos permite convertir un elemento de un tipo a otro tipo.
+    val mensajesDeNumeros = numerosDeLoteria.map { numero -> "Tú número de lotería es $numero." }
+    println(mensajesDeNumeros)
+
+    //La función filter, nos permite filtrar elementos dependiendo de la condición indicada.
+    val numerosFiltrados = numerosDeLoteria.filter { numero -> numero > 50 }
+
+    println(numerosFiltrados)
 }
