@@ -109,4 +109,6 @@ fun main(args: Array<String>) {
     nullables()
 
     listas()
+
+    maps()
 }
