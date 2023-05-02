@@ -113,4 +113,6 @@ fun main(args: Array<String>) {
     maps()
 
     sets()
+
+    funciones()
 }
