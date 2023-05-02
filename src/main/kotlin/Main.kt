@@ -111,4 +111,6 @@ fun main(args: Array<String>) {
     listas()
 
     maps()
+
+    sets()
 }
