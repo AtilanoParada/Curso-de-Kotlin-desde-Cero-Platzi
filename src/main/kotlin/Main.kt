@@ -115,4 +115,6 @@ fun main(args: Array<String>) {
     sets()
 
     funciones()
+
+    scopeFunctions()
 }
