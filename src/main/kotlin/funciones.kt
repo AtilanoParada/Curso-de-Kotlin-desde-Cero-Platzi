@@ -24,8 +24,24 @@ fun funciones() {
     //Ejercicios del video 27 del curso de Platzi.
     //Parámetros nombrados son los parámetros que se les asigna la variable de la función al valor que se le
     // quiere pasar. Esta función también tiene un parámetro por defecto, segundoNombre = "".
-    imprimirNombre(nombre = "Atilano", apellido = "Parada")
+    imprimirNombre(nombre = "José", apellido = "Fernández")
 
+    //Ejercicios del video 28 del curso Platzi.
+    //Lambdas, estas son funciones anónimas.
+    //Aquí tenemos una función anónima (Lambda) que tiene un parámetro de tipo cadena String y que retorna un
+    //entero (Int). El "it" dentro de la lambda se refiere al parámetro de entrada, en este caso el String.
+    //El it puede ser reemplazado por cualquier palabra que no sea reservada inmediatamente después de los corchetes,
+    //por ejemplo: "{ valor -> "
+    val myLambda : (String) -> Int = { it.length }
+    val lambdaEjecutada = myLambda("Hola Platzi")
+
+    println(lambdaEjecutada)
+
+    //Podemos pasar las lambdas como parámetros a otras funciones
+    val saludos = listOf("Hello", "Hola", "Ciao")
+    val longitudDeSaludos = saludos.map(myLambda)
+
+    println(longitudDeSaludos)
 }
 
 //La siguiente es una función que retorna un valor String.
