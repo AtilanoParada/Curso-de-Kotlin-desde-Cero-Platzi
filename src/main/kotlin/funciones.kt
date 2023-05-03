@@ -42,6 +42,25 @@ fun funciones() {
     val longitudDeSaludos = saludos.map(myLambda)
 
     println(longitudDeSaludos)
+
+    //Ejercicios del video 29 del curso de Platzi
+    //Las High Order Function o Funciones de Orden Superior son las funciones que reciben otras funciones como
+    //parámetros.
+    //Funciones de orden superior, guardamos el resultado de la función superFuncion, dandole como datos una cadena y
+    //una lambda, para que la función de orden superior se encargue de abrir la caja que es el lambda.
+    //Las lambdas como parámetro en una función se suelen poner en la última posición por legibilidad, ya que nos
+    //permite sacar la lambda fuera de la función.
+    val largoDelValorInicial = superFuncion(valorInicial = "Hola!") { valor -> valor.length }
+
+    println(largoDelValorInicial)
+
+    //El siguiente ejemplo es para obtener una función de una función, en este ejemplo será para devolver una lambda.
+    //Se obtiene una variable con una lambda integrada.
+    val lambda : () -> String = funcionInception(nombre = "Patricia")
+    //Invocamos el valor de la lambda para que nos de la cadena de texto.
+    val valorLambda = lambda()
+
+    println(valorLambda)
 }
 
 //La siguiente es una función que retorna un valor String.
@@ -76,4 +95,18 @@ fun String.randomCaseExtendida() : String {
 //La siguiente es una función para el ejemplo de la función con parámetros nombrados
 fun imprimirNombre(nombre : String, segundoNombre : String = "", apellido : String) {
     println("Mi nombre completo es $nombre $segundoNombre $apellido.")
+}
+
+//Función de orden superior
+//la variable de entrada block es una sintaxis recomendada por Kotlin para nombrar las lamdas que llegan como
+//variables de entrada
+fun superFuncion(valorInicial : String, block : (String) -> Int) : Int {
+    return block(valorInicial)
+}
+
+//La siguiente es una funci[on que retorna una lambda.
+fun funcionInception(nombre : String) : () -> String {
+    return {
+        "Hola $nombre, desde la lambda."
+    }
 }
