@@ -1,9 +1,9 @@
 import java.util.*
 
 fun funciones() {
-    //Ejercicios de los videos 25 y 26 del curso de Platzi
+    //Ejercicios de los videos 25 y 26 del curso de Platzi.
     //Una función es un código que se ejecuta cada vez que lo llamamos.
-    //La sintaxis de una función empieza con la palabra reservada [fun[, luego el nombre de la función, seguido de los
+    //La sintaxis de una función empieza con la palabra reservada "fun", luego el nombre de la función, seguido de los
     //parámetros dentro de paréntesis, estas son las variables que le damos a la función para que las use en el código
     // que tiene dentro. Sigue el tipo de retorno, es decir el tipo de resultado que regresará la función, para terminar
     //tenemos el código que va dentro de los corchetes.
@@ -20,6 +20,12 @@ fun funciones() {
     val fraseAleatoriaExtendida = "En Platzi nunca paramos de aprender.".randomCaseExtendida()
 
     println("Tu frase extendida es: $fraseAleatoriaExtendida")
+
+    //Ejercicios del video 27 del curso de Platzi.
+    //Parámetros nombrados son los parámetros que se les asigna la variable de la función al valor que se le
+    // quiere pasar. Esta función también tiene un parámetro por defecto, segundoNombre = "".
+    imprimirNombre(nombre = "Atilano", apellido = "Parada")
+
 }
 
 //La siguiente es una función que retorna un valor String.
@@ -49,4 +55,9 @@ fun String.randomCaseExtendida() : String {
     } else {
         this.lowercase(Locale.getDefault())
     }
+}
+
+//La siguiente es una función para el ejemplo de la función con parámetros nombrados
+fun imprimirNombre(nombre : String, segundoNombre : String = "", apellido : String) {
+    println("Mi nombre completo es $nombre $segundoNombre $apellido.")
 }
