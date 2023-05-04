@@ -15,4 +15,16 @@ fun scopeFunctions() {
     nombre?.let {
         valor -> println("El valor no es nulo, es $valor.")
     }
+    
+    //Ejercicios del video 31 del curso de Platzi.
+    //El With nos permite acceder directamente a las propiedades de una variable que le pasamos como parámetro, de
+    //esta forma evitamos repetir llamar a la variable en varias líneas, utilizando "this" o sus propiedades.
+    val colores = listOf("Azul", "Amarillo", "Rojo")
+
+    //En el siguiente ejemplo $this se refiere a la variable y $size que es una propiedad de la variable se usa
+    //sin llamarla.
+    with(colores) {
+        println("Nuestros colores son $this.")
+        println("Está lista tiene una cantidad de colores de $size.")
+    }
 }
