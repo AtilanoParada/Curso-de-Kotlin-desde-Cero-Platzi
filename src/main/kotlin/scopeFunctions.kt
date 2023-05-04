@@ -27,4 +27,16 @@ fun scopeFunctions() {
         println("Nuestros colores son $this.")
         println("Está lista tiene una cantidad de colores de $size.")
     }
+
+    //Ejercicios del video 32 del curso de Platzi.
+    //Run, ejecuta una serie de operaciones inmediatamente después de declarar una variable.
+    val moviles = mutableListOf("Google Pixel 2XL", "Google Pixel 4a", "Huawei Redmi 9", "Xiaomi mi a3")
+        .run {
+            //El removeIf elimina los elementos que cumplan una condición.
+            //El contains es una condición, retorna un verdadero o falso si contiene la palabra indicada.
+            removeIf { movil -> movil.contains("Google") }
+            this
+        }
+
+    println(moviles)
 }
