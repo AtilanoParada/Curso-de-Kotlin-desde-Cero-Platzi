@@ -39,4 +39,29 @@ fun scopeFunctions() {
         }
 
     println(moviles)
+
+    //Ejercicios del video 33 del curso de Platzi
+    //Apply, Esta función nos permite realizar operaciones sobre una variable y luego devolver el valor, al contrario
+    //de la función Run que necesita devolver "this" al final, apply lo devuelve automáticamente. También si lo
+    //combinamos con una función de safe calls crea una función apply segura, solo ejecutará el apply si no es nula.
+    val moviles2= mutableListOf("Google Pixel 2XL", "Google Pixel 4a", "Huawei Redmi 9", "Xiaomi mi a3").apply {
+            removeIf{ movil -> movil.contains("Xiaomi")}
+        }
+
+    println(moviles2)
+
+    //Esta función puede funcionar como el with, solo que el apply acepta valores nullables.
+    val colores2 : MutableList<String>? = null
+
+    colores2?.apply {
+        println("Nuestros colores son $this.")
+        println("La cantidad de colores es $size.")
+    }
+    colores2?.add("Amarillo")
+    colores2?.add("Azul")
+    colores2?.add("Rojo")
+    colores?.apply {
+        println("Nuestros colores son $this.")
+        println("La cantidad de colores es $size.")
+    }
 }
