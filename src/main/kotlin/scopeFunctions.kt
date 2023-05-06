@@ -64,4 +64,15 @@ fun scopeFunctions() {
         println("Nuestros colores son $this.")
         println("La cantidad de colores es $size.")
     }
+    //Ejercicios del video 34 del curso de Platzi.
+    //Also, nos permite obtener una variable, luego ejecutar un código con esa variable y luego devolverla como
+    //parámetro para que pueda volver a ser utilizada como función más adelante.
+    //En este ejemplo se usa asReversed(), la cual invierte la posición de los elementos de la lista.
+    //Also sirve para encadenar funciones, esto para poder depurar el estado de la variable en cada paso que se
+    //va modificando.
+    val moviles3 = mutableListOf("Google Pixel 2XL", "Google Pixel 4a", "Huawei Redmi 9", "Xiaomi mi a3").also {
+        lista -> println("El valor original de la lista es $lista.")
+    }.asReversed()
+
+    println(moviles3)
 }
