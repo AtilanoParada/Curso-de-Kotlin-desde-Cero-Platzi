@@ -117,4 +117,6 @@ fun main(args: Array<String>) {
     funciones()
 
     scopeFunctions()
+
+    bolaMagica()
 }
